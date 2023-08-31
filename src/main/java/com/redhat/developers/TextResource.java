@@ -18,19 +18,16 @@ import net.bytebuddy.asm.Advice.Origin;
 public class TextResource {
 
     @RestClient
-    @Inject
     TextService textService;
 
-    @Transactional
-    @Consumes(MediaType.APPLICATION_JSON)
+
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public String GetPictureText() {
         // Get random text here
         Text t = new Text(0, "Hello World");
 
         // When I activate the following line it bombs
-        //t = textService.text();
+        t = textService.text();
         //
         return t.picturetext();
     }
