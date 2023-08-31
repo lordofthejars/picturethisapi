@@ -13,7 +13,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import net.bytebuddy.asm.Advice.Origin;
-import com.redhat.developers.TextResource;;
+import com.redhat.developers.TextResource;
 
 @Path("/overlayImage")
 public class PictureResource {
@@ -43,5 +43,4 @@ public class PictureResource {
         TextResource textResource = new TextResource();
         return textResource.GetPictureText();
     }
-
 };

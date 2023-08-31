@@ -27,8 +27,11 @@ public class TextResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String GetPictureText() {
         // Get random text here
-        Text t = textService.text();
-        t.setPictureText("HELLO");
+        Text t = new Text(0, "Hello World");
+
+        // When I activate the following line it bombs
+        //t = textService.text();
+        //
         return t.picturetext();
     }
 
