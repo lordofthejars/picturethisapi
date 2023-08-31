@@ -15,3 +15,4 @@ public interface PictureService {
     Response overlayImage(Picture pictureToSend);
 
 }
+
